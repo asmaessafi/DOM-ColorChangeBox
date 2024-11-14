@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     var btn=document.getElementById('change-color-btn');
 
     function getRandomColor() {
-        const hex = Math.floor(Math.random() * 16777215).toString(16);
-        return box.style.backgroundColor='#'+hex.padStart(6, '0');
+    
+    let red=Math.ceil(Math.random()*255)
+    let green=Math.ceil(Math.random()*255)
+    let blue=Math.ceil(Math.random()*255)
+        return box.style.backgroundColor=`rgb(${red},${green},${blue})`;
+    
     };
 
     btn.addEventListener('click',getRandomColor);
-}
-
-)
+})
